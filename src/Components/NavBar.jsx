@@ -3,13 +3,17 @@ import CartWidget from './CartWidget'
 import {Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import { Button} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
+import "../../src/index.css"
+import plumaroja from "./../img/plumaroja.png"
 
 
-const NavBar = () => {
+  const NavBar = () => {
+
   return (
-    <div>
-      <h3>La Pluma Roja</h3>
-
+    <div className='header'>
+      <img className='logo' src={plumaroja} alt="logo" />
+      <nav className='navBar'>
+      
       <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Categorías
@@ -21,9 +25,32 @@ const NavBar = () => {
     
   </MenuList>
 </Menu>
+<Menu>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    Cómo Comprar
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Instrucciones</MenuItem>
+    <MenuItem>Envíos</MenuItem>
+    <MenuItem>Métodos de pago</MenuItem>
+    
+  </MenuList>
+</Menu>
+<Menu>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    Más Info
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Preguntas Frecuentes</MenuItem>
+    <MenuItem>Contacto</MenuItem>
+    
+  </MenuList>
+</Menu>
       <CartWidget/>
+      </nav>
     </div>
   )
 }
+
 
 export default NavBar
