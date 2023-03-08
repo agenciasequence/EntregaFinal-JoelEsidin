@@ -11,7 +11,7 @@ const App = () => {
     <>
    <ChakraProvider>
     <NavBar />
-    <ItemListContainer />
+    <ItemListContainer greeting="Bienvenido a La Pluma Roja, tienda de accesorios de Rol"/>
    </ChakraProvider> 
    </>
   )
