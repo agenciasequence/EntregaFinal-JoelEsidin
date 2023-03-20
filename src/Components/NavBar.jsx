@@ -43,7 +43,7 @@ import plumaroja from "./../img/plumaroja.png"
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Categorías
   </MenuButton>
-  <MenuList>
+  <MenuList className='menu-list'>
     <MenuItem>Dados</MenuItem>
     <MenuItem>Miniaturas</MenuItem>
     <MenuItem>Libros de Rol</MenuItem>
@@ -56,7 +56,7 @@ import plumaroja from "./../img/plumaroja.png"
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Cómo Comprar
   </MenuButton>
-  <MenuList>
+  <MenuList className='menu-list'>
     <MenuItem>Instrucciones</MenuItem>
     <MenuItem>Envíos</MenuItem>
     <MenuItem>Métodos de pago</MenuItem>
@@ -69,7 +69,7 @@ import plumaroja from "./../img/plumaroja.png"
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Más Info
   </MenuButton>
-  <MenuList>
+  <MenuList className='menu-list'>
     <MenuItem>Preguntas Frecuentes</MenuItem>
     <MenuItem>Contacto</MenuItem>
     

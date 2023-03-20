@@ -177,3 +177,7 @@
     font-size:x-large;
     margin-top: 1em;
 }
+
+.menu-list {
+    z-index: 2;
+  }
