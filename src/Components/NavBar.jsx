@@ -1,23 +1,30 @@
 import React, { createRef } from 'react'
-import { useRef, useEffect, useState } from 'react'
+
 import CartWidget from './CartWidget'
 import {Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import { Button} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
-import "../../src/index.css"
+import "../index.css";
 import plumaroja from "./../img/plumaroja.png"
 
 
   const NavBar = () => {
 
     const ref = createRef(null)
+    
 
     const openNav = () => {
       ref.current.style.width = '100%'
+      document.querySelector("#categorias-menu").style.display = "block"
+      document.querySelector("#comprar-menu").style.display = "block"
+      document.querySelector("#info-menu").style.display = "block"
     }
-
+    
     const closeNav = () => {
       ref.current.style.width = '0%'
+      document.querySelector("#categorias-menu").style.display = "none"
+      document.querySelector("#comprar-menu").style.display = "none"
+      document.querySelector("#info-menu").style.display = "none"
     }
 
 
@@ -81,40 +88,35 @@ import plumaroja from "./../img/plumaroja.png"
       <a onClick={closeNav} href="#" className="close">&times;</a>
           <div className="overlay-content">
           
-      <Menu>
+          <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Categorías
   </MenuButton>
-  <MenuList>
+  <MenuList id="categorias-menu">
     <MenuItem>Dados</MenuItem>
     <MenuItem>Miniaturas</MenuItem>
     <MenuItem>Libros de Rol</MenuItem>
-    
   </MenuList>
 </Menu>
-      
-      
+
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Cómo Comprar
   </MenuButton>
-  <MenuList>
+  <MenuList id="comprar-menu">
     <MenuItem>Instrucciones</MenuItem>
     <MenuItem>Envíos</MenuItem>
     <MenuItem>Métodos de pago</MenuItem>
-    
   </MenuList>
 </Menu>
-
 
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Más Info
   </MenuButton>
-  <MenuList>
+  <MenuList id="info-menu">
     <MenuItem>Preguntas Frecuentes</MenuItem>
     <MenuItem>Contacto</MenuItem>
-    
   </MenuList>
 </Menu>
 

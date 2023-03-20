@@ -8,7 +8,12 @@
     font-size: 20px;
 }
 
-body{
+.bodyPag{
+    background-color: #fff59d;
+    min-width: 400px;
+}
+
+.greeting {
     background-color: #fff59d;
     min-width: 400px;
 }

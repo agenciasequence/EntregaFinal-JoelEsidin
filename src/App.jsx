@@ -7,13 +7,18 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 
 const App = () => {
+
+const [contador, setContador] = useState(0)
+const [carrito, setCarrito] = useState([])
+const [registrado, setRegistrado] = useState(false)
+
   return (
-    <>
+    <div className='bodyPag'>
    <ChakraProvider>
     <NavBar />
     <ItemListContainer greeting="Bienvenido a La Pluma Roja, tienda de accesorios de Rol"/>
    </ChakraProvider> 
-   </>
+   </div>
   )
 }
 export default App
