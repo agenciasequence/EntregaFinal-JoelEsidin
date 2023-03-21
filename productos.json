@@ -1,0 +1,60 @@
+[
+
+{
+    "id": "1",
+    "title": "Dados clásicos",
+    "description": "Set de 7 dados de rol clásicos",
+    "price": "$2000",
+    "pictureUrl": "",
+    "stock": "11",
+    "category": "Dados"
+},
+{
+    "id": "2",
+    "title": "Dados metálicos",
+    "description": "Set de 7 dados de rol metálicos",
+    "price": "$10000",
+    "pictureUrl": "",
+    "stock": "3",
+    "category": "Dados"
+},
+{
+    "id": "3",
+    "title": "D&D 5ta edición Manual Básico",
+    "description": "Manual básico para jugar el juego Dungeons and Dragons",
+    "price": "$15000",
+    "pictureUrl": "",
+    "stock": "10",
+    "category": "LibrosRol"
+},
+{
+    "id": "4",
+    "title": "Pathfinder 2da edición Manual Básico ",
+    "description": "Manual básico para jugar el juego Pathfinder",
+    "price": "$13000",
+    "pictureUrl": "",
+    "stock": "4",
+    "category": "LibrosRol"
+},
+{
+    "id": "5",
+    "title": "Miniatura de Mago",
+    "description": "Miniatura de Mago para juegos de rol",
+    "price": "$800",
+    "pictureUrl": "",
+    "stock": "28",
+    "category": "Minis"
+},
+{
+    "id": "6",
+    "title": "Miniatura de Dragón",
+    "description": "Miniatura de Mago para juegos de rol",
+    "price": "$5000",
+    "pictureUrl": "",
+    "stock": "2",
+    "category": "Minis"
+}
+
+
+
+]

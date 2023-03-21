@@ -5,7 +5,7 @@ import { Button} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
 
-const ItemCount = () => {
+const Item = () => {
     const [contador, setContador] = useState(0)
 
     const sumar = () => {
@@ -27,7 +27,6 @@ const ItemCount = () => {
 
   return (
     <Stack spacing={2} direction='column' align='center'>
-        <h5>{contador}</h5>
         <Stack spacing={4} direction='row' align='center'>
   <Button onClick={restar} colorScheme='teal' size='xs'>
     -
@@ -35,8 +34,8 @@ const ItemCount = () => {
   <Button onClick={sumar} colorScheme='teal' size='xs'>
     +
   </Button>
-  <Button onClick={reset} colorScheme='teal' size='xs'>
-    reset
+  <Button colorScheme='teal' size='xs'>
+    {contador}
   </Button>
   
   </Stack>
@@ -47,4 +46,4 @@ const ItemCount = () => {
   )
 }
 
-export default ItemCount
+export default Item
