@@ -51,10 +51,6 @@
     padding: 0 20px;    
 }
 
-.header .nav-links li:hover,
-/**/.overlay a:hover{
-    transform: scale(1.1);
-}
 
 .header .nav-links a{
     font-size: 700;
@@ -65,12 +61,12 @@
     color: #ffbc0e;
 }
 
-/**/.menu {
+.menu {
     display:none;
 }
 
 .header .btn button,
-/**/.header .menu button{
+.header .menu button{
     margin-left: 20px;
     font-weight: 700;
     color: #1b3039;
@@ -83,15 +79,15 @@
 }
 
 .header .btn button:hover,
-/**/.header .menu button:hover{
+.header .menu button:hover{
     background-color: #e2f1f8;
     color: #ffbc0e;
     transform: scale(1.1);
 }
 
 
-/**/@media screen and (max-width: 800px){
-    .nav-links, .btn {
+@media screen and (max-width: 1040px){
+    .nav-links {
         display: none;
     }
     .menu {
@@ -178,6 +174,7 @@
     margin-top: 1em;
 }
 
-.menu-list {
-    z-index: 2;
-  }
+
+
+
+  

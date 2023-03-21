@@ -1,31 +1,31 @@
 import React, { createRef } from 'react'
+import { useState } from 'react'
 
 import CartWidget from './CartWidget'
 import {Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import { Button} from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Button, IconButton} from '@chakra-ui/react'
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import "../index.css";
 import plumaroja from "./../img/plumaroja.png"
 
 
   const NavBar = () => {
 
-    const ref = createRef(null)
+    const ref = createRef("0%")
     
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
     const openNav = () => {
       ref.current.style.width = '100%'
-      document.querySelector("#categorias-menu").style.display = "block"
-      document.querySelector("#comprar-menu").style.display = "block"
-      document.querySelector("#info-menu").style.display = "block"
-    }
-    
-    const closeNav = () => {
-      ref.current.style.width = '0%'
-      document.querySelector("#categorias-menu").style.display = "none"
-      document.querySelector("#comprar-menu").style.display = "none"
-      document.querySelector("#info-menu").style.display = "none"
-    }
+      setIsMenuOpen(true);
+
+}
+
+const closeNav = () => {
+  ref.current.style.width = '0%'
+  setIsMenuOpen(false);
+}
 
 
   return (
@@ -78,21 +78,29 @@ import plumaroja from "./../img/plumaroja.png"
 </li>
 </ul>
 </nav>
+
 <a href="" className="btn"><button>
       <CartWidget/>
       </button>
       </a>
 
-      <a className="menu" href="#"><button onClick={openNav}>Menu</button></a>
-      <div id="mobile-menu" ref={ref} className="overlay">
-      <a onClick={closeNav} href="#" className="close">&times;</a>
-          <div className="overlay-content">
+      <a className="menu" href="#">
+      <IconButton
+    icon={<HamburgerIcon />}
+    variant="ghost"
+    onClick={openNav}
+    aria-label="Open menu"
+  />
+        </a>
+        <div id="mobile-menu" ref={ref} className={`overlay ${isMenuOpen ? "open" : ""}`}>
+  <a onClick={closeNav} href="#" className="close">&times;</a>
+  <div className="overlay-content">
           
           <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Categorías
   </MenuButton>
-  <MenuList id="categorias-menu">
+  <MenuList ref={ref} id="categorias-menu">
     <MenuItem>Dados</MenuItem>
     <MenuItem>Miniaturas</MenuItem>
     <MenuItem>Libros de Rol</MenuItem>
@@ -103,7 +111,7 @@ import plumaroja from "./../img/plumaroja.png"
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Cómo Comprar
   </MenuButton>
-  <MenuList id="comprar-menu">
+  <MenuList ref={ref} id="comprar-menu">
     <MenuItem>Instrucciones</MenuItem>
     <MenuItem>Envíos</MenuItem>
     <MenuItem>Métodos de pago</MenuItem>
@@ -114,7 +122,7 @@ import plumaroja from "./../img/plumaroja.png"
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Más Info
   </MenuButton>
-  <MenuList id="info-menu">
+  <MenuList ref={ref} id="info-menu">
     <MenuItem>Preguntas Frecuentes</MenuItem>
     <MenuItem>Contacto</MenuItem>
   </MenuList>
