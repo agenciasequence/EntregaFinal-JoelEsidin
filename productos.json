@@ -2,55 +2,55 @@
 
 {
     "id": "1",
-    "title": "Dados clásicos",
+    "item": "Dados clásicos",
     "description": "Set de 7 dados de rol clásicos",
     "price": "$2000",
-    "pictureUrl": "",
+    "pictureUrl": "https://www.northumbriantinsoldier.com/wp-content/uploads/2019/02/Dice-Blue-Pearl.jpg",
     "stock": "11",
     "category": "Dados"
 },
 {
     "id": "2",
-    "title": "Dados metálicos",
+    "item": "Dados metálicos",
     "description": "Set de 7 dados de rol metálicos",
     "price": "$10000",
-    "pictureUrl": "",
+    "pictureUrl": "https://www.rathskellers.com/wp-content/uploads/2021/10/Metal_Dragon_Rathskellers_Rpg_Dice_Silver-scaled.jpeg",
     "stock": "3",
     "category": "Dados"
 },
 {
     "id": "3",
-    "title": "D&D 5ta edición Manual Básico",
+    "item": "D&D 5ta edición Manual Básico",
     "description": "Manual básico para jugar el juego Dungeons and Dragons",
     "price": "$15000",
-    "pictureUrl": "",
+    "pictureUrl": "http://prodimage.images-bn.com/pimages/9780786965601_p0_v2_s1200x630.jpg",
     "stock": "10",
     "category": "LibrosRol"
 },
 {
     "id": "4",
-    "title": "Pathfinder 2da edición Manual Básico ",
+    "item": "Pathfinder 2da edición Manual Básico ",
     "description": "Manual básico para jugar el juego Pathfinder",
     "price": "$13000",
-    "pictureUrl": "",
+    "pictureUrl": "https://cdn.paizo.com/image/product/catalog/PZO/PZO2101.jpg",
     "stock": "4",
     "category": "LibrosRol"
 },
 {
     "id": "5",
-    "title": "Miniatura de Mago",
+    "item": "Miniatura de Mago",
     "description": "Miniatura de Mago para juegos de rol",
     "price": "$800",
-    "pictureUrl": "",
+    "pictureUrl": "https://i.redd.it/p3sw7jimigl41.jpg",
     "stock": "28",
     "category": "Minis"
 },
 {
     "id": "6",
-    "title": "Miniatura de Dragón",
+    "item": "Miniatura de Dragón",
     "description": "Miniatura de Mago para juegos de rol",
     "price": "$5000",
-    "pictureUrl": "",
+    "pictureUrl": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/4138rZetQWL._AC_.jpg",
     "stock": "2",
     "category": "Minis"
 }

@@ -1,10 +1,10 @@
 import React, { createRef } from 'react'
 import { useState } from 'react'
-
-import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 import {Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import { Button, IconButton} from '@chakra-ui/react'
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import CartWidget from './CartWidget'
 import "../index.css";
 import plumaroja from "./../img/plumaroja.png"
 
@@ -31,9 +31,14 @@ const closeNav = () => {
   return (
     
     <header className="header">
+      <div className='textLogoDiv'>
+      <h1 className='textLogo'>Tienda de Rol</h1>
+      <h1 className='textLogo'>La Pluma Roja</h1>
+      </div>
       <div className="logo">
-        
+       <Link to="../">
       <img  src={plumaroja} alt="logo" />
+      </Link>
       </div>
       <nav className='navBar'>
       
@@ -71,7 +76,9 @@ const closeNav = () => {
   </MenuButton>
   <MenuList className='menu-list'>
     <MenuItem>Preguntas Frecuentes</MenuItem>
-    <MenuItem>Contacto</MenuItem>
+    <Link to="/Components/about">
+    <MenuItem>Sobre Nosotros</MenuItem>
+    </Link>
     
   </MenuList>
 </Menu>
