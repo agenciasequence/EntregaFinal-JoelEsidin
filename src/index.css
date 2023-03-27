@@ -185,8 +185,8 @@
 .footer {
     background-color: #1b3039;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+/*     padding: 20px;
+ */    text-align: center;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -234,15 +234,22 @@
   }
 
 
-  .divProductDetail {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    width: 100%;
+  .itemList {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 3em;
+    padding: 10em;
+    padding-top: 3em;
     
-    place-items: center;
+
     
 
 
   }
 
+ 
+ 
  

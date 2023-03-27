@@ -49,9 +49,15 @@ const closeNav = () => {
     Categorías
   </MenuButton>
   <MenuList className='menu-list'>
+    <Link to = {`/category/${"Dados"}`}>
     <MenuItem>Dados</MenuItem>
+    </Link>
+    <Link to = {`/category/${"Minis"}`}>
     <MenuItem>Miniaturas</MenuItem>
+    </Link>
+    <Link to = {`/category/${"LibrosRol"}`}>
     <MenuItem>Libros de Rol</MenuItem>
+    </Link>
     
   </MenuList>
 </Menu>

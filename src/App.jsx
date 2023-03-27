@@ -7,25 +7,31 @@ import Footer from './Components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import About from './Components/About'
-import ProductDetail from './Components/ProductDetail'
-import ProductDetailContainer from './Components/ProductDetailContainer'
+import ProductDetail from './Components/ItemDetail'
+import ItemDetailContainer from './Components/ItemDetailContainer'
 
 
 const App = () => {
-
+const greeting = "Bienvenido a la tienda de Rol La Pluma Roja"
 
 
   return (
     <BrowserRouter>
-   <ChakraProvider>
+   <ChakraProvider className="body">
     <NavBar />
     <Routes>
-      <Route exact path="/" element={<ItemListContainer />}/>
-      <Route exact path="/category/:id" element={<ItemListContainer />}/>
-      <Route exact path="/item/:id" element={<ItemListContainer />}/>
+      <Route exact path="/" element={<ItemListContainer greeting={greeting} />}/>
+      <Route
+      
+      exact path="/category/:category"
+      
+      element={<ItemListContainer />}
+      
+      />
+      <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
     
     </Routes>
-    <Footer/>
+    
    </ChakraProvider> 
    
    </BrowserRouter>

@@ -1,16 +1,18 @@
 import React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
-import {Menu, MenuButton, MenuItem, MenuList, Stack} from "@chakra-ui/react"
+import { Stack} from "@chakra-ui/react"
 import { Button} from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
 import '../index.css'
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
     const [contador, setContador] = useState(0)
 
     const sumar = () => {
+        if(contador == stock){
+          alert("Máxima cantidad disponible")
+        }else{
         setContador (contador + 1)
+      }
     }
 
     const restar = () => {
@@ -40,7 +42,7 @@ const ItemCount = () => {
   <Button onClick={() => {alert("Producto agregado exitósamente")}} colorScheme='teal' size='xs'>
      Agregar al carrito
   </Button>
-  
+  <h6>Stock: {stock}</h6>
   </Stack>
   
 </Stack>

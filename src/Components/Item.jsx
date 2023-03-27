@@ -1,14 +1,13 @@
 import React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import {Menu, MenuButton, MenuItem, MenuList, Stack} from "@chakra-ui/react"
-import { Button} from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { useState } from 'react'
+import {Card, Stack, CardBody, Heading, Divider, CardFooter, ButtonGroup,Button} from "@chakra-ui/react"
+import { Image, Text, } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import '../index.css'
 import ItemCount from './ItemCount'
 
 
-const Item = () => {
+const Item = ({id,item, price, description, image, stock, category}) => {
     
 
    
@@ -16,7 +15,40 @@ const Item = () => {
 
   return (
    <>
-   <ItemCount/>
+    <div className='card' key={id}>
+      <ChakraProvider>
+      <Card maxW='sm'>
+  <CardBody>
+    <Image
+      src={image}
+      alt='Green double couch with wooden legs'
+      borderRadius='lg'
+      boxSize='xs'
+    />
+    <Stack mt='6' spacing='1'>
+      <Heading size='xs'>{item}</Heading>
+      <Text>
+        {description}
+      </Text>
+      <Text color='blue.600' fontSize='2xl'>
+        {price}
+      </Text>
+    </Stack>
+  </CardBody>
+  <Divider />
+  <CardFooter>
+    <ButtonGroup spacing='2'>
+      <Button>
+      <Link to={`/item/${id}`}>
+      Detalles
+      </Link>
+      </Button>
+    </ButtonGroup>
+  </CardFooter>
+</Card>
+
+</ChakraProvider>
+    </div>
    </>
   )
 }

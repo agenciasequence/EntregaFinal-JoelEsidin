@@ -7,41 +7,52 @@ import { Heading } from '@chakra-ui/react'
 import { Divider } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Image, Text } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 
-const ProductDetail = ({title, price, description, image}) => {
+const ItemDetail = ({products}) => {
+  const {id} = useParams()
+  console.log(id);
+
+  const [producto, setProducto] = useState([])
+
+  const prodFilter = products.filter((prod) => prod.id == id)
     
   return (
-    <div className='card'>
+    <>
+    {prodFilter.map((prod) => (
+    <div key={prod.id}>
       <ChakraProvider>
       <Card maxW='sm'>
   <CardBody>
     <Image
-      src={image}
+      src={prod.pictureUrl}
       alt='Green double couch with wooden legs'
       borderRadius='lg'
       boxSize='xs'
     />
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>{title}</Heading>
+    <Stack mt='6' spacing='1'>
+      <Heading size='xs'>{prod.Item}</Heading>
       <Text>
-        {description}
+        {prod.description}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        {price}
+        {prod.price}
       </Text>
     </Stack>
   </CardBody>
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <ItemCount/>
+      <ItemCount stock={prod.stock}/>
     </ButtonGroup>
   </CardFooter>
 </Card>
 
 </ChakraProvider>
     </div>
+    ))}
+    </>
   )
 }
 
-export default ProductDetail
+export default ItemDetail
