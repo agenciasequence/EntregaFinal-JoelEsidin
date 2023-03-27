@@ -20,7 +20,7 @@ const ItemDetail = ({products}) => {
   return (
     <>
     {prodFilter.map((prod) => (
-    <div key={prod.id}>
+    <div className='itemDetail' key={prod.id}>
       <ChakraProvider>
       <Card maxW='sm'>
   <CardBody>
