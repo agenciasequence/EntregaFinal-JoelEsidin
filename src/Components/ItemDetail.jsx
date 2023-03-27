@@ -7,7 +7,7 @@ import { Heading } from '@chakra-ui/react'
 import { Divider } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Image, Text } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const ItemDetail = ({products}) => {
   const {id} = useParams()

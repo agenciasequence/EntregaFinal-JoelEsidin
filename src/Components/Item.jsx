@@ -4,7 +4,6 @@ import {Card, Stack, CardBody, Heading, Divider, CardFooter, ButtonGroup,Button}
 import { Image, Text, } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import '../index.css'
-import ItemCount from './ItemCount'
 
 
 const Item = ({id,item, price, description, image, stock, category}) => {

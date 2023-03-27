@@ -1,7 +1,6 @@
 import React from 'react'
 import Item from './Item'
 import '../index.css'
-import ItemDetailContainer from './ItemDetailContainer'
 
 
 const ItemList = ({products}) => {

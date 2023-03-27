@@ -1,13 +1,8 @@
-import { useState } from 'react'
 import './index.css'
 import NavBar from './Components/NavBar'
 import ItemListContainer from './Components/ItemListContainer'
 import { ChakraProvider } from '@chakra-ui/react'
-import Footer from './Components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import About from './Components/About'
-import ProductDetail from './Components/ItemDetail'
 import ItemDetailContainer from './Components/ItemDetailContainer'
 
 
