@@ -1,27 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
+import {doc, getDoc, getFirestore} from "firebase/firestore"
+import { useParams } from 'react-router-dom'
+import '../index.css'
 
 const ItemDetailContainer = () => {
-    
-    const getProducts = async () => {
-        const response = await fetch('../../productos.json')
-        const datos = await response.json()
-        return datos
-    }
-
-    const [products, setProducts] = useState([])
-    
-
-    useEffect(() => {
-        getProducts().then((prod)=> setProducts(prod))
-
-    },[])
-
-    
-
+  
   return (
     <div> 
-          <ItemDetail products={products}/>  
+          <ItemDetail />  
         
     </div>
   )

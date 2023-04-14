@@ -3,7 +3,7 @@ import NavBar from './Components/NavBar'
 import ItemListContainer from './Components/ItemListContainer'
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ItemDetailContainer from './Components/ItemDetailContainer'
+import ItemDetail from './Components/ItemDetailContainer'
 
 
 const App = () => {
@@ -23,7 +23,7 @@ const greeting = "Bienvenido a la tienda de Rol La Pluma Roja"
       element={<ItemListContainer />}
       
       />
-      <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
+      <Route exact path="/item/:id" element={<ItemDetail />}/>
     
     </Routes>
     

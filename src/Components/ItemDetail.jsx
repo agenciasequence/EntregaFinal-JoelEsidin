@@ -7,50 +7,79 @@ import { Heading } from '@chakra-ui/react'
 import { Divider } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Image, Text } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import {doc, getDoc, getFirestore} from "firebase/firestore"
+import '../index.css'
 
-const ItemDetail = ({products}) => {
+
+
+const ItemDetail = () => {
   const {id} = useParams()
   console.log(id);
+  const [product, setProduct] = useState({
+    id: "",
+    pictureUrl: "",
+    Item: "",
+    description: "",
+    price: "",
+    stock: ""
 
-  const [producto, setProducto] = useState([])
 
-  const prodFilter = products.filter((prod) => prod.id == id)
-    
+})
+
+  useEffect(()=>{
+
+const db = getFirestore()
+
+const oneItem = doc(db, "productos", id)
+
+getDoc(oneItem).then((snapshot)=>{
+if (snapshot.exists()){
+setProduct({id: snapshot.id, ...snapshot.data()})
+
+}
+
+
+})
+
+
+
+  },[id])
+   console.log(product) 
   return (
     <>
-    {prodFilter.map((prod) => (
-    <div className='itemDetail' key={prod.id}>
+    
+    <div className='itemDetail' key={product.id}>
       <ChakraProvider>
       <Card maxW='sm'>
   <CardBody>
     <Image
-      src={prod.pictureUrl}
-      alt='Green double couch with wooden legs'
+      src={product.pictureUrl}
+      
       borderRadius='lg'
       boxSize='xs'
     />
     <Stack mt='6' spacing='1'>
-      <Heading size='xs'>{prod.Item}</Heading>
+      <Heading size='xs'>{product.item}</Heading>
       <Text>
-        {prod.description}
+        {product.description}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        {prod.price}
+        {product.price}
       </Text>
     </Stack>
   </CardBody>
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <ItemCount stock={prod.stock}/>
+      <ItemCount stock={product.stock}/>
     </ButtonGroup>
   </CardFooter>
 </Card>
 
 </ChakraProvider>
     </div>
-    ))}
+    
     </>
   )
 }

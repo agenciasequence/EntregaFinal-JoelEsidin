@@ -62,33 +62,7 @@ const closeNav = () => {
   </MenuList>
 </Menu>
       </li>
-      <li>
-<Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-    Cómo Comprar
-  </MenuButton>
-  <MenuList className='menu-list'>
-    <MenuItem>Instrucciones</MenuItem>
-    <MenuItem>Envíos</MenuItem>
-    <MenuItem>Métodos de pago</MenuItem>
-    
-  </MenuList>
-</Menu>
-</li>
-<li>
-<Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-    Más Info
-  </MenuButton>
-  <MenuList className='menu-list'>
-    <MenuItem>Preguntas Frecuentes</MenuItem>
-    <Link to="/Components/about">
-    <MenuItem>Sobre Nosotros</MenuItem>
-    </Link>
-    
-  </MenuList>
-</Menu>
-</li>
+      
 </ul>
 </nav>
 
