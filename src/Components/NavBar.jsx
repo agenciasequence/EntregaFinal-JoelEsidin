@@ -60,16 +60,25 @@ const closeNav = () => {
     </Link>
     
   </MenuList>
+  
 </Menu>
+
       </li>
-      
+      <li>
+      <Link to="../">
+        <Button>
+        Catálogo
+        </Button>
+        </Link>
+      </li>
 </ul>
 </nav>
 
-<a href="" className="btn"><button>
+<div className="btn"><button>
       <CartWidget/>
       </button>
-      </a>
+      </div>
+      
 
       <a className="menu" href="#">
       <IconButton

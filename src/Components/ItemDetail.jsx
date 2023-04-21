@@ -72,7 +72,7 @@ setProduct({id: snapshot.id, ...snapshot.data()})
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <ItemCount stock={product.stock}/>
+      <ItemCount stock={product.stock} id={product.id} price={product.price} name={product.item}/>
     </ButtonGroup>
   </CardFooter>
 </Card>

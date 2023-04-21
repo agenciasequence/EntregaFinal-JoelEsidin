@@ -20,17 +20,17 @@ const Item = ({id,item, price, description, image, stock, category}) => {
   <CardBody>
     <Image
       src={image}
-      alt='Green double couch with wooden legs'
+      alt='Imagen del producto'
       borderRadius='lg'
       boxSize='xs'
     />
     <Stack mt='6' spacing='1'>
       <Heading size='xs'>{item}</Heading>
-      <Text>
+      <Text className="descripcion">
         {description}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        {price}
+        ${price}
       </Text>
     </Stack>
   </CardBody>
