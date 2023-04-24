@@ -135,17 +135,14 @@
 
 .header .overlay a{
     padding: 15px;
-    font-size: 36px;
+    font-size: 1rem;
     display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
-    color: #eceff1;
+    color: #000000;
 }
 
-.header .overlay a:hover, 
-.header .overlay a:focus{
-    color: #ffbc0e;
-}
+
 
 .header .overlay .close{
     position: absolute;
@@ -167,6 +164,20 @@
     margin-top: 5%;
     gap: 10%;
     height: 18rem;
+}
+
+.divTernario {
+    display: flex;
+    place-content: center;
+    gap: 10%;
+    height: 18rem;
+}
+
+.divForm h2 {
+    color: #e2f1f8;
+    margin: auto;
+    font-size:xx-large;
+    font-weight: bolder;
 }
 
 .inputContainer {
@@ -197,6 +208,9 @@
 .inputContainer2 h2 {
     color: #e2f1f8;
 }
+
+
+
 
 @media screen and (max-height:738px) {
     .header .overlay a{

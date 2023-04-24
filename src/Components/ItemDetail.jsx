@@ -65,7 +65,7 @@ setProduct({id: snapshot.id, ...snapshot.data()})
         {product.description}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        {product.price}
+        ${product.price}
       </Text>
     </Stack>
   </CardBody>

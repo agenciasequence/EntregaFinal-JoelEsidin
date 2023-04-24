@@ -15,7 +15,9 @@ const Cart = () => {
 
   const suma = totales.reduce((total,num) => total + num, 0)
   
-  
+  const vaciarCarrito = () => {
+    setCart([])
+  }
   
   
 
@@ -53,10 +55,13 @@ const Cart = () => {
 
     const ordersCollection = collection(db, "orden")
 
-    
+    console.log(cart)
 
   return (
     <div className="divForm">
+      {cart.length == 0 ? (<h2>Su carrito está vacío</h2>):
+      (
+        <div className='divTernario'>
         <form onSubmit={handleSubmit} className='form'>
           <div className="inputContainer">
             <FormLabel color="white">Ingrese su Nombre</FormLabel>
@@ -79,6 +84,14 @@ const Cart = () => {
 
           <h4>Su ID de compra es: {orderId}</h4>
         </div>
+        <div className="inputContainer2">
+        <Button onClick={vaciarCarrito}>
+          Vaciar Carrito
+        </Button>
+        </div>
+        </div>
+)  
+}
     </div>
   )
 }

@@ -93,36 +93,27 @@ const closeNav = () => {
   <div className="overlay-content">
           
           <Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+  <MenuButton size="lg" as={Button} rightIcon={<ChevronDownIcon />}>
     Categorías
   </MenuButton>
   <MenuList ref={ref} id="categorias-menu">
+  <Link to = {`/category/${"Dados"}`}>
     <MenuItem>Dados</MenuItem>
+    </Link>
+    <Link to = {`/category/${"Minis"}`}>
     <MenuItem>Miniaturas</MenuItem>
+    </Link>
+    <Link to = {`/category/${"LibrosRol"}`}>
     <MenuItem>Libros de Rol</MenuItem>
+    </Link>
   </MenuList>
 </Menu>
+<Link to="../">
+        <Button size="lg">
+        Catálogo
+        </Button>
+        </Link>
 
-<Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-    Cómo Comprar
-  </MenuButton>
-  <MenuList ref={ref} id="comprar-menu">
-    <MenuItem>Instrucciones</MenuItem>
-    <MenuItem>Envíos</MenuItem>
-    <MenuItem>Métodos de pago</MenuItem>
-  </MenuList>
-</Menu>
-
-<Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-    Más Info
-  </MenuButton>
-  <MenuList ref={ref} id="info-menu">
-    <MenuItem>Preguntas Frecuentes</MenuItem>
-    <MenuItem>Contacto</MenuItem>
-  </MenuList>
-</Menu>
 
             </div>
 
