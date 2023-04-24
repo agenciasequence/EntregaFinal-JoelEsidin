@@ -4,6 +4,8 @@ import { Button} from '@chakra-ui/react'
 import { useState } from 'react'
 import '../index.css'
 import { CartContext } from '../Context/CartContext'
+import 'sweetalert2/dist/sweetalert2.min.css'
+import Swal from 'sweetalert2'
 
 const ItemCount = ({stock, id, price, name}) => {
 
@@ -27,7 +29,12 @@ const ItemCount = ({stock, id, price, name}) => {
     }
 
    const addCarrito = () => {
-
+    Swal.fire({
+      title: '<strong>¡Producto agregado al carrito con éxito!</strong>',
+      html: 'Ve al carrito para terminar tu compra o agrega más productos',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    })
     setCart((items) => {
       const itemFound = items.find((item) => item.id === id)
       if (itemFound) {
@@ -46,6 +53,7 @@ const ItemCount = ({stock, id, price, name}) => {
       } else {
         return [...items, {id, cantidad: contador, price, name, total: price * contador}]
       }
+       
     })
    }
 

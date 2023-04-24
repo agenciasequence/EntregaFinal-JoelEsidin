@@ -5,8 +5,8 @@ import { Button, FormControl,
 import {collection, getDocs, getFirestore, addDoc} from "firebase/firestore"
 import { CartContext } from '../Context/CartContext'
 import { useContext } from 'react'
-import { color } from 'framer-motion'
-
+import 'sweetalert2/dist/sweetalert2.min.css'
+import Swal from 'sweetalert2'
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext)
@@ -30,7 +30,18 @@ const Cart = () => {
     const handleSubmit = (e)=>{
         e.preventDefault()
         
-        addDoc(ordersCollection, order).then(({id}) => setOrderId(id))
+        addDoc(ordersCollection, order)
+        .then(({id}) => {
+          
+        setOrderId(id)
+                
+        Swal.fire({
+          title: '<strong>¡Compra finalizada!</strong>',
+          text: `Su número de compra es: ${id}`,
+          icon: 'success',
+          confirmButtonText: 'Ok'
+        })
+      })
     }
 
     const order = {

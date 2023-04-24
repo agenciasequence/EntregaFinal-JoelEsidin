@@ -9,7 +9,7 @@ import { CartContextProvider } from './Context/CartContext'
 import ItemCount from './Components/ItemCount'
 import CartWidget from './Components/CartWidget'
 import React from 'react'
-
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 
 const App = () => {
