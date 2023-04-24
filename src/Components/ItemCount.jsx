@@ -33,7 +33,7 @@ const ItemCount = ({stock, id, price, name}) => {
       if (itemFound) {
         return items.map((item) => {
           if (item.id === id) {
-            return { ...item, cantidad: item.cantidad + contador, total: price * contador}
+            return { ...item, cantidad: item.cantidad + contador}
           } else {
             return item
           }

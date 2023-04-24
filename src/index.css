@@ -165,19 +165,37 @@
     display: flex;
     place-content: center;
     margin-top: 5%;
+    gap: 10%;
+    height: 18rem;
 }
 
 .inputContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+  }
+
+  .form {
+    margin-top: 1.5rem;
+  }
+
+  .inputContainer2 {
+    margin-top: 3rem;
   }
 
 .buttonBox {
     display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.inputContainer2 h4 {
+    color: #e2f1f8;
+}
+
+.inputContainer2 h2 {
+    color: #e2f1f8;
 }
 
 @media screen and (max-height:738px) {

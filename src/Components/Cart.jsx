@@ -10,6 +10,14 @@ import { color } from 'framer-motion'
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext)
+  
+  const totales = cart.map((ord) => ord.total)
+
+  const suma = totales.reduce((total,num) => total + num, 0)
+  
+  
+  
+  
 
     const [nombre, setNombre] = useState("")
     const [email, setEmail] = useState("")
@@ -34,14 +42,11 @@ const Cart = () => {
 
     const ordersCollection = collection(db, "orden")
 
-    console.log(cart.map((prod) => (
-      prod.name
-
-    )))
+    
 
   return (
     <div className="divForm">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='form'>
           <div className="inputContainer">
             <FormLabel color="white">Ingrese su Nombre</FormLabel>
             <input type="text" onChange={(e) => setNombre(e.target.value)} />
@@ -54,7 +59,13 @@ const Cart = () => {
             <Button type='submit' size="sm" width="100%">Finalizar Compra</Button>
             </div>
         </form>
-        <div>
+        <div className='inputContainer2'>
+          <h4>Su orden es la siguiente:</h4>
+          {cart.map((ord, index) => <h4 key={index}>{ord.cantidad}x{ord.name}: ${ord.total}</h4>)}
+          
+          <h4>Total compra: ${suma}</h4>
+          
+
           <h4>Su ID de compra es: {orderId}</h4>
         </div>
     </div>
