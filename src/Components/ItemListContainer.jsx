@@ -25,7 +25,6 @@ const ItemListContainer = ({greeting}) => {
     
   },[]) 
 
-  console.log(products)
   const {category} = useParams()
   const catFilter = products.filter((product) => product.category === category)
 

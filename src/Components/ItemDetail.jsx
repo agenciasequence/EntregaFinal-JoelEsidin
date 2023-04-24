@@ -15,7 +15,7 @@ import '../index.css'
 
 const ItemDetail = () => {
   const {id} = useParams()
-  console.log(id);
+  
   const [product, setProduct] = useState({
     id: "",
     pictureUrl: "",
@@ -45,7 +45,7 @@ setProduct({id: snapshot.id, ...snapshot.data()})
 
 
   },[id])
-   console.log(product) 
+   
   return (
     <>
     
